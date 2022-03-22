@@ -2,7 +2,7 @@
   "presets": {
   },
   "current": {
-    "logo_use_image": false,
+    "logo_use_image": true,
     "logo_max_height": "200",
     "favicon_enable": true,
     "preloader_enable": true,
