@@ -3,7 +3,7 @@
   },
   "current": {
     "logo_use_image": true,
-    "logo_max_height": "150",
+    "logo_max_height": "120",
     "favicon_enable": true,
     "preloader_enable": true,
     "base_font": "Google+Poppins",
