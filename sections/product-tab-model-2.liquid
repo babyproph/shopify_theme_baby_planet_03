@@ -1,0 +1,230 @@
+<div data-section-id="{{ section.id }}"  data-section-type="product-tab-type-2" class="product-tab-type-2" >     
+   {{ 'swiper.js' | asset_url | script_tag }}
+   {{ 'swiper.css' | asset_url | stylesheet_tag }}
+
+    <div class="full_width_tab">    
+      <div class="grid-uniform">          
+
+        <div class="grid__item">      
+          <div class="dt-sc-tabs-container-section"> 
+            
+
+            {% if section.blocks.size > 0 %} 
+            <div class="dt-sc-tabs-container"> 
+              
+             
+              <div class="dt-sc-tabs" style="float:left;width:100%;">   
+                 
+              {% if section.settings.title_1 != blank %}
+            <div class="border-title">
+              <h4 style="color:{{ section.settings.title_1_clr }};">{{ section.settings.title_1 }}</h4>
+            </div>
+            {% endif %}
+                <div class="tab-title">
+                {% for block in section.blocks %} 
+                {% if block.settings.title != blank %}
+                <div class="tab-link"><a href="#" class="tabs-{{ block.id }}">{{ block.settings.title }} </a></div>           
+                {% endif %}
+                {% endfor %}
+                </div>
+              </div>
+              {% for block in section.blocks %}
+              {%- assign collection = collections[block.settings.collection] -%}               
+              <div class="dt-sc-tabs-content" style="float:left;width:100%;"> 
+                 <div class="swiper-button">
+   				 <div class="swiper-button-prev {{ block.settings.title | handleize }}"></div>
+                <div class="swiper-button-next {{ block.settings.title | handleize }}"></div>
+                </div>
+               <div class="swiper-container {{ block.settings.title | handleize }}"> 
+                <ul class="tab2  swiper-wrapper {{ block.id }}">
+                  {% for product in collection.products %}
+                  {% include 'home-product-grid-item' , grid_item_width: " " %}  
+                  {% else %}
+                  {% for i in (1..8) %}
+                  <li class="grid__item swiper-slide item-row  on-sale" id="product-{{ i }}">
+                    <div class="products product-hover-5">
+                      <div class="product-container">
+                        <a href="#" class="grid-link"> 
+                          {% if forloop.index == 3 %}
+                          <div class="featured-tag">
+                            <span class="badge badge--sale">
+                              <span class="gift-tag badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}">{{ 'products.product.sale' | t }}</span>
+                            </span>
+                          </div>{% endif %}
+
+                          <div class="reveal"> 
+                            {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                            {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }} 
+                          </div>
+                        </a>
+                        <div class="ImageWrapper">
+                          <div class="product-button">
+                              <a href="#" class="quick-view-text"> 
+                                <i class="zmdi zmdi-eye"></i>
+                              </a>
+                              <a href="{{ product.url }}">                      
+                                <i class="zmdi zmdi-link"></i>
+                              </a>  
+                              <form action="#" method="post" class="variants clearfix" id="cart-form-6529189125">
+                                <input type="hidden" name="id" value="21661289093">
+                                <a href="#" class="add-cart-btn"><i class="zmdi zmdi-shopping-cart"></i> </a>
+                              </form>
+                              <a href="/account/login" class="wishlist"><i class="zmdi zmdi-favorite-outline"></i></a> 
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-detail"> 
+                        <a href="#" class="grid-link__title">Sample title {{ i }}</a>
+
+                        <div class="grid-link__meta">
+                          <div class="product_price"> <span class="money" data-currency-usd="$320.00">$0.00</span> </div>
+                          <del class="grid-link__sale_price"><span class="money" data-currency-usd="$756.00">$0.00</span></del> </div>
+                        <span class="spr-badge" id="spr_badge_6529189125" data-rating="0.0"> 
+                          <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i></span> <span class="spr-badge-caption"> </span> </span>
+
+                      </div>
+                    </div>
+                  </li>
+                  {% endfor %} 
+                  {% endfor %}
+                </ul>
+                </div>
+                
+              </div>
+              <script type="text/javascript">                   
+                var swiper = new Swiper('.{{ block.settings.title | handleize }}', {
+                   slidesPerView: 4,
+                   slidesPerColumn: 2,                  
+                   loop: false,
+                   pagination: {
+                   el: '.swiper-pagination',
+                   clickable: true,
+                  },
+                   navigation: {
+                    nextEl: '.swiper-button-next.{{ block.settings.title | handleize }}',
+                    prevEl: '.swiper-button-prev.{{ block.settings.title | handleize }}',
+                  },
+                                        
+                                        breakpoints: {
+                                        1024: {
+                                        slidesPerView: 4,
+                                        
+                                        },
+                                        768: {
+                                        slidesPerView: 3,
+                                        
+                                        },
+                                        640: {
+                                        slidesPerView: 2,
+                                       
+                                        },
+                                        567: {
+                                        slidesPerView: 1,
+                                        
+                                        }
+                                        },
+                });               
+
+              </script>
+              {% endfor %}                
+            </div><!--End tabs container-->
+            {% endif %}
+          </div>    
+        </div>
+
+      </div>
+     <style>
+        .product-tab-type-2 .full_width_tab .dt-sc-tabs  a { color:{{ section.settings.tag_clr }}; }
+        .product-tab-type-2 .full_width_tab .dt-sc-tabs  a.tabs-{{ block.id }}:hover,.product-tab-type-2 .full_width_tab .dt-sc-tabs a.tabs-{{ block.id }}.current { color:{{ section.settings.tag_hover_clr }}; }
+
+       .product-tab-type-2 .dt-sc-tabs-content .swiper-button-prev, .product-tab-type-2 .dt-sc-tabs-content .swiper-button-next {  color:{{ section.settings.arrow_text_clr }}; }
+       .product-tab-type-2 .dt-sc-tabs-content .swiper-button-prev:hover, .product-tab-type-2 .dt-sc-tabs-content .swiper-button-next:hover {  color:{{ section.settings.arrow_text_hover_clr }}; }
+
+    </style>
+    </div> 
+</div>
+
+{% schema %}
+{
+"name": "Product Tab 1",
+"class": "index-section",
+"max_blocks": 4,
+"settings": [
+
+{
+"type": "text",
+"id": "title_1",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "title_1_clr",
+"label": "Heading",
+"default": "#000"
+} ,
+{
+"type": "color",
+"id": "tag_clr",
+"label": "Tag Color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "tag_hover_clr",
+"label": "Tag Hover Color",
+"default": "#fff"
+},
+{
+      "type": "color",
+      "id": "arrow_text_clr",
+      "label": "Arrow Text",
+ 	  "default":"#000"
+      
+    },
+	{
+      "type": "color",
+      "id": "arrow_text_hover_clr",
+      "label": "Arrow Hover Text",
+ 	  "default":"#ff0069"
+      
+    }
+
+
+
+
+
+],
+"blocks": [	
+{
+"type": "text_block",
+"name": "Column",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Collection Name",
+"default": "Tab Name"
+},	
+
+{
+"id": "collection",
+"type": "collection",
+"label": "Collection"
+}	
+]
+}
+],
+"presets": [
+{
+"name": "Product Tab 1",
+"category": "Collection",
+"blocks": [
+{
+"type": "text_block"
+}        
+]
+}
+]
+}
+{% endschema %}

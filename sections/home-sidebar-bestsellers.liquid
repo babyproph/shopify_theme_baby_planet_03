@@ -1,0 +1,141 @@
+{% if section.settings.show_best_products %}
+<div data-section-id="{{ section.id }}"  data-section-type="home-sidebar-bestsellers" class="home-sidebar-bestsellers">  
+    <div class="widget widget_top_rated_products" style ="background:{{section.settings.sidebar_bg_color}}">
+      {% if collections[section.settings.bestseller].products.size > 0 %} 
+      {% if section.settings.title != blank %}
+      <h4><span>{{ section.settings.title }}</span></h4>  
+      {% endif %}
+      {% endif %}      
+      <ul class="no-bullets top-products">
+       {% for product in collections[section.settings.bestseller].products limit: section.settings.limit %}
+        <li class="products"> 
+          <span class="top_product_count">0{{ forloop.index }}</span>
+          <div class="top-products-detail product-detail grid__item">            
+            <a class="grid-link__title" href="{{ product.url | within: collection }}"> {{ product.title }} </a>            
+            <div class="top-product-prices grid-link__meta">
+              
+              <div class="product_price">
+                <div class="grid-link__org_price">
+                {{ product.price_min | money }}
+                  </div>
+              {% if product.compare_at_price_max > product.price %}
+              <del>{{ product.compare_at_price_max | money }}</del>
+              {% endif %}
+                 </div>
+            </div>
+                
+           {% if settings.product_review %}  <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span> {% endif %}
+   
+          </div>
+            {% comment %}
+            {% if product.compare_at_price > product.price %}
+            <span class="sale">{{ 'products.product.sale' | t }}</span>    
+            {% endif %}
+            {% endcomment %}
+           
+          
+          {% if product.images.size > 0 %}            
+          <a class="thumb grid__item" href="{{ product.url | within: collection }}">                  
+            <img alt="featured product" src="{{ product.featured_image | product_img_url: '70x' }}">                                              
+          </a>
+          {% endif %} 
+        </li>
+        
+        {% else %}
+         {% for i in (1..section.settings.limit) %}
+        
+        <li class="products">          
+          <div class="top-products-detail product-detail grid__item">            
+            <a class="grid-link__title" href="#">Sample title {{ i }} </a>            
+            <div class="top-product-prices grid-link__meta">
+              <div class="product_price">
+                <div class="grid-link__org_price">
+                  <span class="money" data-currency-usd="$320.00">$0.00</span>
+                </div>
+              </div>
+            </div>
+            <span class="spr-badge" id="spr_badge_664455446594" data-rating="0.0"><span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i><i class="spr-icon spr-icon-star-empty"></i></span><span class="spr-badge-caption"></span>
+            </span>
+          </div>
+          <a class="thumb grid__item" href="#" style="width:75px;">                  
+           {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                  {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}                                             
+          </a>
+        </li>
+
+        {% endfor %} 
+         {% endfor %}
+      </ul> 
+     {% comment %}
+       <div class="top_products_nav"></div>
+      {% endcomment %}
+    </div>
+</div>
+ {% endif %} 
+
+ {% schema %}
+  {
+    "name": "Home Sidebar Bestsellers",    
+    "settings": [	
+      {
+        "type": "checkbox",
+        "id": "show_best_products",
+        "label": "Enable best sellers"
+      },
+{
+"type": "color",
+"id": "sidebar_bg_color",
+"label": "Bg Color",
+"default": "#fff"
+},
+	 {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "collection",
+        "id": "bestseller",
+        "label": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "limit",
+        "label": "Product Limit",
+        "default": "4"
+      }
+	
+]
+  }
+{% endschema %}
+
+{% comment %}
+
+<script type="text/javascript">
+$(document).ready(function(){
+     $(".home-sidebar-bestsellers .top-products").owlCarousel({ 
+        loop:false,      
+        nav:true,       
+        dots: false,
+        navContainer: ".home-sidebar-bestsellers .top_products_nav",
+        navText: ['<a class="next"><i class="fa fa-chevron-left"></i></a>','<a class="prev active"><i class="fa fa-chevron-right"></i></a>'],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+ 
+  });
+});
+      
+</script>
+
+{% endcomment %} 
+
+

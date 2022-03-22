@@ -1,0 +1,153 @@
+{% if section.settings.show_testimonial %}
+
+<div data-section-id="{{ section.id }}" data-section-type="testimonial-type-16" class="testimonial-type-16">  
+  {%- assign collection = collections[section.settings.collection] -%}   
+
+  <div class="grid-uniform">  
+
+   
+     
+        <div class="container">
+          <div class="grid__item">
+            <div class="banner_image">
+            <div class="testimonial-content widget" style="float:left;width:100%;background-color:{{section.settings.background_color}};">      
+             
+                
+                {% if section.settings.title_1 != blank %}
+              <h4><span>{{ section.settings.title_1 }}</span></h4>
+                {% endif %} 
+              
+              <div class="type-11__items-wrapper">                            
+                <ul class="type11__items {{ section.id }}-loop owl-carousel owl-theme">                               
+                  {% if section.blocks.size > 0 %}  
+                  {% for block in section.blocks %}  
+                  <li class="testimonial-detail">                    
+                    <div class="author-detail">
+                    
+                      <div class="test-img">
+                          {% if block.settings.avatar != blank %}
+                        <img src="{{ block.settings.avatar | img_url: '75x75' }}" />
+                        {% else %}
+                         <img src="//via.placeholder.com/75x75">
+                         {% endif %}
+                      </div>
+                     
+                      {% if block.settings.author_name != blank %}
+                      <div class="author">
+                        <h6   class="author-name" style="color:{{block.settings.author_color }}">{{ block.settings.author_name }} <span style="color:{{block.settings.author_descolor }}">{{ block.settings.author_designation }}</span></h6>
+                      </div>
+                      {% endif %}
+                    </div>
+                    <blockquote>
+                      {% if block.settings.text_desc != blank %}
+                      <q style="color:{{block.settings.des_color }}">{{ block.settings.text_desc }}</q>
+                      {% endif %} 
+                    </blockquote>
+                  </li>
+                  {% endfor %}         
+                  {% endif %}   
+                </ul>             
+              </div>
+              <script type="text/javascript">       
+                $(document).ready(function(){
+                  var type8_products = $(".type11__items.{{ section.id }}-loop");
+                                         type8_products.owlCarousel({
+                                         loop:false,                                        
+                                         nav:false,
+                                         margin:10,
+                                         navContainer: ".wide-owl__nav.{{ section.id }}",                                        
+                                         dots: true,
+                                         smartSpeed : 1000,
+                                         navSpeed : 1000,
+                                         items:1   ,
+                                         responsive:{
+                                         0:{
+                                         items:1
+                                         },
+                                         600:{
+                                         items:1
+                                         },
+                                         720:{
+                                         items:1
+                                         }
+                                         }
+                                         });     
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+                  {% endif %}   
+
+  {% schema %}
+  {
+  "name": "Testimonial",
+  "class": "index-section",
+  "settings": [
+  {
+"type": "checkbox",
+"id": "show_testimonial",
+"label": "Enable Testimonial?",
+"default":true
+
+},
+  {
+  "type": "color",
+  "id": "background_color",
+  "label":"Bckground color",
+  "default": "#000"
+  },
+  
+  {
+  "type": "text",
+  "id": "title_1",
+  "label": "Title"
+  }
+ 
+  ],
+  "blocks": [
+  {
+  "type": "text",
+  "name": "Testimonial 16",
+  "settings": [
+  {
+  "type": "textarea",
+  "id": "text_desc",
+  "label": "Description"
+  },
+  {
+  "type": "color",
+  "id": "des_color",
+  "label": "Description Color",
+  "default":"#000"
+  },
+  {
+  "type": "text",
+  "id": "author_name",
+  "label": "author name"
+  },
+  {
+  "type": "text",
+  "id": "author_designation",
+  "label": "Designation"
+  },
+  {
+  "type": "color",
+  "id": "author_color",
+  "label": "Author Color",
+  "default":"#000"
+  },
+  {
+  "type": "image_picker",
+  "id": "avatar",
+  "label": "Avatar",
+  "info": "Size: 75x75"
+  }
+  ]
+  }
+  ]
+  }
+  {% endschema %}

@@ -1,0 +1,127 @@
+{% if section.settings.support_block %}
+<div data-section-id="{{ section.id }}"  data-section-type="support-block-type-1" class="support-block-type-1">     
+  
+  <div class="grid-uniform">
+      <ul class="support_block" style="background:{{ section.settings.bg_color }};float:left;width:100%;">         
+        {% if section.blocks.size > 0 %}      
+        {% for block in section.blocks %}
+        {% case section.blocks.size %}
+        {% when 1 %}
+        {%- assign block_width = 'one-whole text-center' -%}
+        {% when 2 %}
+        {%- assign block_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+        {% when 3 %}
+        {%- assign block_width = 'wide--one-third post-large--one-third large--one-third medium--one-half small-grid__item' -%}
+        {% when 4 %}
+        {%- assign block_width = 'wide--one-quarter post-large--one-quarter large--one-quarter medium--one-half small-grid__item' -%}
+        {% endcase %}
+        <li class="grid__item {{ block_width }} wow fadeInUp"  data-wow-delay="{{ settings.time_lazy_load }}ms">
+
+          <div class="support_section" >                      
+           {% if block.settings.image != blank  %} 
+            <div class="support_icon" style="background:url({{ block.settings.image | img_url: "50x" }});background-repeat:no-repeat;">   
+        
+              </div>
+            
+            {% else %}
+            <div class="support_icon">
+          <img src="//via.placeholder.com/55x42">
+            </div>
+           {% endif %}
+            <div class="support_text"> 
+              {% if block.settings.title != blank  %}  
+              <h6 style="color:{{ block.settings.title_color }};">{{ block.settings.title }}</h6>
+              {% endif %} 
+              {% if block.settings.desc != blank  %}  
+              <p style="color:{{ block.settings.desc_color }};" class="desc">{{ block.settings.desc }}</p>
+              {% endif %} 
+            </div>      
+          </div>    
+        </li>  
+        {% endfor %}
+        {% endif %}
+      </ul>
+  </div>
+ 
+  <div class="dt-sc-hr-invisible-medium"></div>
+
+</div>
+ {% endif %}
+{% schema %}
+{
+"name": "Support",
+"class": "index-section",
+"max_blocks":4,
+"settings": [
+
+{
+"type": "checkbox",
+"id": "support_block",
+"label": "Use support block?",
+"default": true
+},
+{
+"type": "color",
+"id": "bg_color",
+"label": "Bg",
+"default":"#fff"
+}
+
+],
+"blocks": [
+{
+"type": "text",
+"name": "support block",
+"settings": [ 
+{
+"type": "image_picker",
+"id": "image",
+"label": "Image"
+},
+
+{
+"type": "text",
+"id": "title",
+"label": "Heading"          
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "desc",
+"label": "Description"          
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Color",
+"default":"#000"
+}    
+
+]
+}
+],
+"presets": [
+{
+"name": "Support",
+"category": "Text",
+"blocks": [
+{
+"type": "text"
+},
+{
+"type": "text"
+},
+{
+"type": "text"
+}
+
+]
+}
+]
+}
+{% endschema %}

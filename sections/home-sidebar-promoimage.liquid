@@ -1,0 +1,112 @@
+{% if section.settings.show_cpromo_img %}
+{% if section.blocks.size > 0 %}  
+<div data-section-id="{{ section.id }}"  data-section-type="home-sidebar-promoimage" class="home-sidebar-promoimage">  
+<div class="widget widget_promo_img" style ="background:{{section.settings.sidebar_bg_color}}">
+  <ul id="promo-carousel" class="owl-carousel owl-theme">
+    {% for block in section.blocks %}
+    {% if block.settings.promo_img != blank %}
+    <li>
+      <a href="{{ block.settings.promo_link }}" title="{{ block.settings.promo_title }}"> 
+        <img src="{{ block.settings.promo_img | img_url : '400x' }}" alt="{{ block.settings.promo_title }}" title="{{ block.settings.promo_title }}" /> 
+      </a>
+            <h5>{{ block.settings.promo_title }}</h5>
+
+    </li>
+    {% else %}
+    <li>
+      <a href="{{ block.settings.promo_link }}" title="{{ block.settings.promo_title }}"> 
+<img src="//via.placeholder.com/320x450">      </a>
+            <h5>{{ block.settings.promo_title }}</h5>
+
+    </li>
+    
+   
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+</div>
+{% endif %}
+{% endif %}
+{% schema %}
+{
+"name": "Home Sidebar Banner",
+"max_blocks": 3,
+"settings": [
+{
+"type": "checkbox",
+"id": "show_cpromo_img",
+"label": "Enable Promo Image",
+"default":true
+
+},
+{
+"type": "color",
+"id": "sidebar_bg_color",
+"label": "Bg Color",
+"default": "#fff"
+}
+
+
+],
+"blocks": [
+{
+"type": "content",
+"name": "Promo  banner",
+"settings": [	
+{
+"type": "image_picker",
+"id": "promo_img",
+"label": "Image",
+"info": "Size: 430x500"
+},
+{
+"type": "url",
+"id": "promo_link",
+"label": "URL"
+},
+{
+"type": "text",
+"id": "promo_title",
+"label": "Title",
+"default":" Promo Img"
+}
+
+]
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+#instafeed a {width: 33%;}
+{% endstylesheet %}
+
+
+{% javascript %}
+ $(document).ready(function(){
+     var promoimage = $("#promo-carousel");
+      promoimage.owlCarousel({
+         items:1,
+         loop:true,              
+         dots: true,
+autoplay:true,
+autoplayTimeout:5000,
+         responsive:{
+           0:{
+             items: 1
+           },
+           600:{
+             items:1
+           },
+           700:{
+             items: 1
+           },           
+           1000:{
+             items: 1
+           }
+         }
+  			});
+        });
+{% endjavascript %}
+

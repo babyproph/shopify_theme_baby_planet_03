@@ -1,0 +1,259 @@
+<div data-section-id="{{ section.id }}"  data-section-type="vertical-product-grid-type-2" class="vertical-product-grid-type-2">
+
+  <div class="wrapper">
+    {% if section.settings.title != blank or section.settings.small_title != blank  %}
+    <div class="section-header section-header--small">
+      <div class="border-title wow bounce">
+        {% endif %}            
+        {% if section.settings.title != blank %}
+        <h4 class="section-header__title" style="color:{{ section.settings.title_color }};">    
+          {{ section.settings.title }}
+        </h4>
+        {% endif %}  
+        {% if section.settings.small_title != blank %}<div class="short-desc"> <p style="color:{{ section.settings.small_title_color }};">{{ section.settings.small_title }}</p></div>{% endif %}  
+
+        {% if section.settings.title != blank or section.settings.small_title != blank  %}
+      </div>
+    </div>    
+    {% endif %}    
+
+    {% if section.blocks.size > 0 %}  
+    <div class="grid-uniform">
+      {% for block in section.blocks %}
+      {% case section.blocks.size %}
+      {% when 1 %}
+      {%- assign block_width = 'one-whole text-center' -%}
+      {% when 2 %}
+      {%- assign block_width = 'wide--one-half post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+      {% when 3 %}
+      {%- assign block_width = 'wide--one-third post-large--one-third large--one-half medium--one-half small-grid__item' -%}
+      {% when 4 %}
+      {%- assign block_width = 'wide--one-quarter post-large--one-half large--one-half medium--one-half small-grid__item' -%}
+      {% endcase %}
+
+      <div class="grid__item {{ block_width }}"> 
+        <div class="vertical-product-grid-type-2-carousel">  
+          <div class="title-boxed"> 
+            {% if block.settings.title != blank %}   
+            <h5>{{ block.settings.title }}</h5>
+            {% endif %}
+            <div class="swiper-button">
+              <div class="swiper-button-prev {{ block.settings.title | handleize }}-{{ block.id }}"></div>
+              <div class="swiper-button-next {{ block.settings.title | handleize }}-{{ block.id }}"></div>
+            </div>
+          </div>
+          <div class="full_width_tab swiper-container {{ block.settings.title | handleize }}-{{ block.id }}">         
+            <ul class="type3__items {{ block.settings.title | handleize }}-{{ block.id }} swiper-wrapper">                                
+              {%- assign collection = collections[block.settings.collection] -%}   
+              {% for product in collection.products %}                     
+              {% include 'vertical_grid_item', grid_item_width:" " %}   
+              {% else %}
+              {% for i in (1..8) %}
+              <li class="grid__item swiper-slide item-row  on-sale" id="product-{{ i }}">
+                <div class="products">
+                  <div class="product-container">
+                    <a href="#" class="grid-link"> 
+                      {% if forloop.index == 3 %}
+                      <div class="featured-tag">
+                        <span class="badge badge--sale">
+                          <i class="fa fa-star"></i>
+                          <span class="gift-tag badge__text{% if sale_text.size > 7 %} badge__text--small{% endif %}">{{ 'products.product.sale' | t }}</span>
+                        </span>
+                      </div>{% endif %}
+
+                      <div class="reveal"> 
+                        {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                        {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }} 
+                      </div>
+                    </a>
+                    <div class="ImageWrapper">
+                      <div class="product-button">
+                        <div class="button-row-1">
+                          <a href="#" class="quick-view-text"> 
+                            <i class="zmdi zmdi-eye"></i>
+                          </a>
+                          <a href="{{ product.url }}">                      
+                            <i class="zmdi zmdi-link"></i>
+                          </a>  
+                        </div>
+                        <div class="button-row-2">
+                          <form action="#" method="post" class="variants clearfix" id="cart-form-6529189125">
+                            <input type="hidden" name="id" value="21661289093">
+                            <a href="#" class="add-cart-btn"><i class="zmdi zmdi-shopping-cart"></i> </a>
+                          </form>
+                          <a href="/account/login" class="wishlist"><i class="zmdi zmdi-favorite-outline"></i></a> 
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-detail"> 
+                    <a href="#" class="grid-link__title">Sample title {{ i }}</a>
+
+                    <div class="grid-link__meta">
+                      <div class="product_price"> <span class="money" data-currency-usd="$320.00">$0.00</span> </div>
+                      <del class="grid-link__sale_price"><span class="money" data-currency-usd="$756.00">$0.00</span></del> </div>
+                    <span class="spr-badge" id="spr_badge_6529189125" data-rating="0.0"> 
+                      <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i></span> <span class="spr-badge-caption"> </span> </span>
+
+                  </div>
+                </div>
+              </li>
+              {% endfor %} 
+              {% endfor %}        
+            </ul>                   
+          </div>
+
+        </div>
+      </div> 
+
+
+
+      {% endfor %}
+    </div>
+    {% endif %}       
+  </div>
+
+  <style>  
+    {% if section.settings.heading_image_need %} .vertical-product-grid-type-2  .border-title:after {  content:"";background-image:url({{ section.settings.heading_image | img_url: 'master' }});display:inline-block;background-repeat:no-repeat;background-position:top center;width:75px;height:34px;} {% endif %}
+
+    .vertical-product-grid-type-2 .title-boxed h5 { color:{{ section.settings.tab_bg_color }}; }
+    .vertical-product-grid-type-2 .title-boxed { background:{{ section.settings.tab_bg }};color:{{ section.settings.tab_bg_color }}; }
+    .vertical-product-grid-type-2 .swiper-button-prev, .vertical-product-grid-type-2 .swiper-button-next {  float:left;text-align:center;color:{{ section.settings.arrow_hover_color }}; }
+    .vertical-product-grid-type-2 .swiper-button-prev:hover, .vertical-product-grid-type-2 .swiper-button-next:hover { color:{{ section.settings.tab_hover_color }}; }
+
+  </style>
+
+
+</div>
+{% for block in section.blocks %}
+<script type="text/javascript">                   
+  var swiper = new Swiper('.{{ block.settings.title | handleize }}-{{ block.id }}', {
+                          slidesPerView: 1,
+                          slidesPerColumn: 3,                  
+                          loop: true,
+                          pagination: {
+                          el: '.swiper-pagination',
+                          clickable: true,
+                          },
+                          navigation: {
+                          nextEl: '.swiper-button-next.{{ block.settings.title | handleize }}-{{ block.id }}',
+                          prevEl: '.swiper-button-prev.{{ block.settings.title | handleize }}-{{ block.id }}',
+                          },        
+                          });               
+
+</script>
+
+
+{% endfor %}
+
+{% schema %}
+{
+"name": "Vertical Product Grid",
+"class": "index-section",  
+"max_blocks": 4,
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "New arrivals"
+},	
+{
+"type": "checkbox",
+"id": "heading_image_need",
+"label": "Show Heading Image ?"
+
+},	
+{
+"type": "image_picker",
+"id": "heading_image",
+"label": "Image",
+"info": "Size: 133x56"
+
+},	
+{
+"type": "color",
+"id": "title_color",
+"label": "Heading Color",
+"default": "#000"
+},	
+{
+"type": "text",
+"id": "small_title",
+"label": "Small Heading"
+},	
+{
+"type": "color",
+"id": "small_title_color",
+"label": "Small Heading Color",
+"default": "#000"      
+},
+{
+"type": "color",
+"id": "tab_bg",
+"label": "Tab Bg",
+"default": "#efefef"      
+},
+{
+"type": "color",
+"id": "tab_bg_color",
+"label": "Tab Color",
+"default": "#1a1a1a"      
+},
+
+{
+"type": "color",
+"id": "arrow_hover_color",
+"label": "Arrow Color",
+"default": "#fff"      
+},
+
+{
+"type": "color",
+"id": "tab_hover_color",
+"label": "Arrow Hover Color",
+"default": "#fff"      
+}
+],
+"blocks": [ 	     
+{
+"type": "Collection",
+"name":"Vertical collections",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default":"New Arrivals"
+},
+
+{
+"id": "collection",
+"type": "collection",
+"label": "Collection"
+}
+]
+}
+],
+
+"presets": [
+{
+"name": "Vertical Product Grid",
+"category": "Collection",
+"blocks": [
+{
+"type": "Collection"
+},
+{
+"type": "Collection"
+},
+{
+"type": "Collection"
+}
+]
+
+}
+]
+}
+{% endschema %}

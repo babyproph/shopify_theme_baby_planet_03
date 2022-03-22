@@ -1,0 +1,159 @@
+{% if section.settings.show_featured_post %}
+<div data-section-id="{{ section.id }}"  data-section-type="home-sidebar-featured-post" class="home-sidebar-featured-post">
+  <div class="blog-post widget" style ="background:{{section.settings.sidebar_bg_color}}">
+
+      {% if section.settings.title != blank %}
+      <h4 class="section-header__title"><span>{{ section.settings.title }}</span></h4>
+      {% endif %}  
+
+      <div class="nav_blog"> </div>
+      <div class="home-sidebar-featured-post__inner blog-section">           
+
+        {% if blogs[section.settings.pick_featured_blog].articles.size > 0 %}  
+        <ul class="type3__items">             
+          {% for article in blogs[section.settings.pick_featured_blog].articles limit: section.settings.limit  %}   
+          {% assign test_val =  forloop.index | modulo:3 %}            
+          <li class="article-item grid__item {{ blog.article.size }}">
+            <div class="article">
+              <div class="home-blog-image">
+                {% if article.image %}
+                <img src="{{ article.image.src | img_url: 'large' }}" alt="{{ article.title }}" />            
+                {% endif %}
+              </div>
+              <div class="blog-description">
+
+                {% if section.settings.show_featured_date %}   
+                <p style="color:{{ section.settings.date_color }}" class="blog-date">
+                  <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}"><span class="date">{{ article.published_at | date: '%b' }} {{ article.published_at | date: '%d' }} , {{ article.published_at | date: '%Y' }}</span></time>    		 
+
+                </p>
+                {% endif %}  
+
+                <div class="home-blog-content blog-detail">
+
+                  <h4><a  href="{{ article.url }}">{{ article.title }}</a></h4>
+
+                  {% if section.settings.blog_description %} 
+                  <p style="color:{{ section.settings.desc_color }}">{{ article.content | strip_html | truncate: 100 }}</p> 
+                  {% endif %}
+                </div>
+
+              </div>
+            </div>   
+          </li>
+          {% unless forloop.first  %}
+          {% unless forloop.last  %}
+          {% if test_val == 0 %}
+        </ul>
+        <ul class="type3__items">                       
+          {% endif %}
+          {% endunless %}
+          {% endunless %}
+          {% endfor %}        
+        </ul>                 
+        {% else %}
+        <ul class="type3__items">
+          {% for i in (1..3) %}        
+          <li class="article-item grid__item {{ forloop.index }}">
+            <div class="article">
+              <div class="home-blog-image"> 
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+              <div class="blog-description">    
+                <p class="blog-date">
+                  <time datetime="2016-11-01"><span class="date">Jan 01 , 2017</span></time>
+                </p>
+                <div class="home-blog-content blog-detail">
+                  <h4><a href="#">Sample post {{ i }}</a></h4>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        
+      </div>
+
+  </div>
+<style>
+  .home-sidebar-featured-post h4 a { color:{{ section.settings.title_color }}; }
+  .home-sidebar-featured-post h4 a:hover { color:{{ section.settings.title_hover_color }}; }
+  
+  </style>
+
+</div>
+{% endif %}
+
+{% schema %}
+{
+"name": "Home Sidebar Post",
+"settings": [
+{
+"type": "checkbox",
+"id": "show_featured_post",
+"label": "Enable"
+},
+{
+"type": "color",
+"id": "sidebar_bg_color",
+"label": "Bg Color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",	
+"default": "Featred posts"
+},
+
+{
+"type": "blog",
+"id": "pick_featured_blog",
+"label": "Select blog"        
+}, 
+{
+        "type": "text",
+        "id": "limit",
+        "label": "Product Limit",
+        "default": "4"
+      },
+{
+"type": "color",
+"id": "title_color",
+"label": "Title Color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "title_hover_color",
+"label": "Title Hover Color",
+"default": "#ff0069"
+},
+{
+"type": "checkbox",
+"id": "show_featured_date",
+"label": "Show date"
+},
+{
+"type": "color",
+"id": "date_color",
+"label": "Date Color",
+"default": "#848484"
+},
+{
+"type": "checkbox",
+"id": "blog_description",
+"label": "Show description"
+},
+{
+"type": "color",
+"id": "desc_color",
+"label": "Desc Color",
+"default": "#000"
+}
+]
+}
+{% endschema %}
+
+

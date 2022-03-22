@@ -1,0 +1,276 @@
+<div data-section-id="{{ section.id }}" data-section-type="grid-banner-type-21" class="grid-banner-type-21">   
+  <div class="grid-uniform">   
+    <div class="grid__item grid-banner-type-4_top">
+      <div class="grid__item wide--one-half post-large--one-half large--one-half medium-down--one-third small--grid__item img-hover-effect-3 img-hover-effect">
+        {% if section.settings.link_1 != blank %}<a class="banner_half_img" href="{{ section.settings.link_1 }}">{% endif%}
+        {% if section.settings.image_1 != blank %}
+        <img src="{{ section.settings.image_1 | img_url: '950x450' }}" alt="{{ section.settings.title_1 }}" />
+        {% else %}
+        <img src="//via.placeholder.com/950x450">
+        {% endif%}           
+        {% if section.settings.link_1 != blank %}  </a>
+        {% endif%}
+        <div class="featured-content">  
+            
+          
+          
+          {% if section.settings.text_1 != blank %}
+          <h2 style="color:{{ section.settings.text_1_color }}">{{ section.settings.text_1}}</h2>    
+          {% endif %}  
+          {% if section.settings.title_1 != blank %}
+          <h6 style="color:{{ section.settings.title_1_color }}">{{ section.settings.title_1 }}</h6>
+          {% endif %}
+          {% if section.settings.offer_1   %}
+          <div class="offer_text" style="color:{{ section.settings.offer_text_clr_1 }};">{{ section.settings.offer_1 }}</div>
+          {% endif %}
+          {% if section.settings.button_1 != blank %}
+          <a class="btn three" href="{{ section.settings.link_1 }}" style="color:{{ section.settings.button_1_txt_color }};border:none;background-color:{{ section.settings.button_1_bg_color }};">{{ section.settings.button_1}}</a>    
+          {% endif %}         
+        </div>   
+      </div> 
+      <div class="grid__item wide--one-half post-large--one-half large--one-half medium-down--one-third small--grid__item img-hover-effect img-hover-effect-4">
+        {% if section.settings.link_2 != blank %}<a class="banner_half_img" href="{{ section.settings.link_2 }}">{% endif%}
+        {% if section.settings.image_2 != blank %}
+        <img src="{{ section.settings.image_2 | img_url: '950x450' }}" alt="{{ section.settings.title_2 }}" />
+        {% else %}
+
+        <img src="//via.placeholder.com/950x450">
+        {% endif%}           
+        {% if section.settings.link_2 != blank %}  </a>
+
+        {% endif%}
+        <div class="featured-content">     
+           
+          
+          {% if section.settings.text_2 != blank %}
+          <h2 style="color:{{ section.settings.text_2_color }}">{{ section.settings.text_2}}</h2>    
+          {% endif %}  
+          {% if section.settings.title_2 != blank %}
+          <h6 style="color:{{ section.settings.title_2_color }}">{{ section.settings.title_2 }}</h6>
+          {% endif %}
+{% if section.settings.offer != blank   %}
+          <div class="offer_text" style="color:{{ section.settings.offer_text_clr_2 }};">{{ section.settings.offer }}</div>
+          {% endif %}
+          {% if section.settings.button_2 != blank %}
+          <a class="btn four" href="{{ section.settings.link_2 }}" style="color:{{ section.settings.button_2_txt_color }};border:none;background-color:{{ section.settings.button_2_bg_color }};">{{ section.settings.button_2}}</a>    
+          {% endif %}         
+        </div>
+      </div>
+    </div>
+    <div class="dt-sc-hr-invisible-medium"></div>
+  </div>    
+</div>
+<style>
+  .grid-banner-type-21 .featured-content .btn.three:hover { background:{{ section.settings.button_1_hover_bg_color }} !important;color:{{ section.settings.button_1_hover_txt_color }} !important; }
+  .grid-banner-type-21 .featured-content .btn.four:hover { background:{{ section.settings.button_2_hover_bg_color }} !important;color:{{ section.settings.button_2_hover_txt_color }} !important; }
+  .grid-banner-type-21 .featured-content h2 span { color:{{ section.settings.hot_text }}; }
+   {% if section.settings.use_overlay %}
+  
+   .grid-banner-type-21 .img-hover-effect.img-hover-effect-3:before { background: -webkit-linear-gradient(left, {{ section.settings.overlay_bgcolor_4 | color_modify: 'alpha', 0 }} 0%, {{ section.settings.overlay_bgcolor_4 | color_modify: 'alpha', 0.3 }} 100%);
+	background: linear-gradient(to right, {{ section.settings.overlay_bgcolor_4 | color_modify: 'alpha', 0 }} 0%, {{ section.settings.overlay_bgcolor_4 | color_modify: 'alpha', 0.3 }} 100%); }
+ 
+  .grid-banner-type-21 .img-hover-effect.img-hover-effect-4:before { background: -webkit-linear-gradient(left, {{ section.settings.overlay_bgcolor_5 | color_modify: 'alpha', 0 }} 0%, {{ section.settings.overlay_bgcolor_5 | color_modify: 'alpha', 0.3 }} 100%);
+	background: linear-gradient(to right, {{ section.settings.overlay_bgcolor_5 | color_modify: 'alpha', 0 }} 0%, {{ section.settings.overlay_bgcolor_5 | color_modify: 'alpha', 0.3 }} 100%); }
+  
+ {% endif %} 
+
+</style>
+
+
+{% schema %}
+{
+"name": "Grid Banner",
+"class": "index-section",
+"settings": [  
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 950x450"
+},
+{
+"type": "color",
+"id": "title_1_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "title_1",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "text_1_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "textarea",
+"id": "text_1",
+"label": "Description"
+},
+{
+"type": "color",
+"id": "hot_text",
+"label": "Hot Text",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "offer_1",
+"label": "Percentage"
+
+},
+
+{
+"type": "color",
+"id": "offer_text_clr_1",
+"label": "Offer Color",
+"default":"#000"
+
+},
+{
+"type": "text",
+"id": "button_1",
+"label": "Button text"
+},
+{
+"type": "color",
+"id": "button_1_bg_color",
+"label": "Button bg color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "button_1_txt_color",
+"label": "Button text color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "button_1_hover_bg_color",
+"label": "Button hover Bg color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "button_1_hover_txt_color",
+"label": "Button hover text color",
+"default": "#fff"
+},
+{
+"type": "checkbox",
+"id": "use_overlay",
+"label": "Overlay Use",
+"default": true
+},
+{
+"type": "color",
+"id": "overlay_bgcolor_4",
+"label": "Overlay Bg",
+"default": "#fff"
+},
+{
+"type": "url",
+"id": "link_1",
+"label": "Link URL"
+},
+{
+"type": "image_picker",
+"id": "image_2",
+"label": "Image",
+"info": "Size: 950x450"
+},
+
+{
+"type": "text",
+"id": "title_2",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "title_2_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "textarea",
+"id": "text_2",
+"label": "Description"
+
+},
+{
+"type": "color",
+"id": "text_2_color",
+"label": "Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "offer",
+"label": "Percentage"
+
+},
+
+{
+"type": "color",
+"id": "offer_text_clr_2",
+"label": "Offer Color",
+"default":"#000"
+
+},
+{
+"type": "text",
+"id": "button_2",
+"label": "Button text"
+},
+{
+"type": "color",
+"id": "button_2_bg_color",
+"label": "Button bg color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "button_2_txt_color",
+"label": "Button text color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "button_2_hover_bg_color",
+"label": "Button hover bg color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "button_2_hover_txt_color",
+"label": "Button hover text color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "overlay_bgcolor_5",
+"label": "Overlay Bg",
+"default": "#fff"
+},
+
+{
+"type": "url",
+"id": "link_2",
+"label": "Link URL"
+}
+],
+"presets": [
+{
+"name": "Grid Banner",
+"category": "Image",
+"blocks": []
+}
+]
+}
+{% endschema %}
+
+
+

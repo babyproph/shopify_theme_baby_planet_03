@@ -1,0 +1,65 @@
+
+{% if settings.show_recent_articles %}
+<div class="widget recent_article"  style ="background:{{ settings.sidebar_article_bg_color}}">
+  <h4>{{ 'blogs.sidebar.recent_articles' | t }}<span class="right"></span></h4>
+  <ul>
+    {% for article in blogs[blog.handle].articles limit: settings.blog_article_limit %}
+    <li>
+      {% if settings.show_recent_articles_img %}
+      {% if article.image %}
+      <div class="artical-image">
+        {% assign image_alt = article.title | escape %}
+        {{ article | img_url: 'master' | img_tag: image_alt, 'article__image' | link_to: article.url }}
+      </div>
+      {% endif %}     
+      {% endif %}
+      <div class="article-detail">
+        {% if settings.show_blog_4_date %}   
+                <p style="color:{{ settings.blog_design_4_datecolor }}" class="blog-date">
+                  <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}"><span class="date">{{ article.published_at | date: '%b' }} {{ article.published_at | date: '%d' }} , {{ article.published_at | date: '%Y' }}</span></time>    		 
+
+                </p>
+                {% endif %} 
+        <h6>
+          <a href="{{ article.url }}">{{ article.title }}</a></h6>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if settings.show_blog_tags %}
+ {% if blog.all_tags.size > 0 %}
+<div class="widget widget_categories" style ="background:{{settings.sidebar_tag_bg_color}}">
+ 
+  <h4>{{ 'blogs.sidebar.categories' | t }}<span class="right"></span></h4>
+  <ul>
+    {% for tag in blog.all_tags %}
+    {% if current_tags contains tag %}
+    <li class="active">{{ tag }}</li>
+    {% else %}
+    <li>{{ tag | link_to_tag: tag }}</li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  
+</div>
+{% endif %}
+{% endif %}
+
+
+
+
+ {% section 'blog-sidebar-instagram' %}
+
+
+
+
+
+ {% section 'home-sidebar-deals' %}
+
+
+
+
+

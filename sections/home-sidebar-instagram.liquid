@@ -1,0 +1,80 @@
+{% if section.settings.instagram_use %}
+<div class="grid__item clearfix instagram widget" style ="background:{{section.settings.sidebar_bg_color}}">
+  {% if section.settings.title != blank or section.settings.text_1 %}
+  <h4 style="color:{{ section.settings.title_1_clr }};"><span> {{ section.settings.title | escape }}</span></h4> 
+  {% endif %}
+
+  <div id="insta-feed"></div>
+</div>
+
+{% endif %}
+
+{%- if section.settings.padding != blank or section.settings.margin != blank -%}
+{% assign margin = section.settings.margin | remove: ' ' | split: '-' | join: ' ' %}
+{% assign padding = section.settings.padding | remove: ' ' | split: '-' | join: ' ' %}
+<style>
+  #shopify-section-{{ section.id }} { 
+    {%- if section.settings.margin != blank -%} margin: {{margin}};{%- endif -%}
+    {%- if section.settings.padding != blank -%}padding: {{padding}}{%- endif -%}
+  }
+
+  .lush-instagram .info { background: {{ section.settings.overlay | color_modify: 'alpha', 0.7 }}; }    
+</style>
+{%- endif -%}
+
+{% schema %}
+{
+"name": "Sidebar Instagram Feed",
+"class": "instagram-block",    
+"settings": [
+
+{
+"type": "checkbox",
+"id": "instagram_use",
+"label": "Use Insagram?"
+
+},
+{
+"type": "color",
+"id": "sidebar_bg_color",
+"label": "Bg Color",
+"default": "#fff"
+},
+{
+"type": "header",
+"content": "[Install This App](https://apps.shopify.com/instafeed)"
+},
+
+{
+"type": "text",
+"id": "title",
+"label": "Title",
+"default": "Instagram Feed"
+},
+{
+"type": "color",
+"id": "title_1_clr",
+"label": "Heading",
+"default": "#000"
+},
+
+{
+"type": "header",
+"content": "=== settings Color"
+},
+{
+"type": "color",
+"id": "overlay",
+"label": "Image Overlay",
+"default": "#000"
+}
+
+],
+"presets": [
+{
+"name": "Sidebar Instagram Feed",
+"category": "Instagram Feed"
+}
+]
+}
+{% endschema %}

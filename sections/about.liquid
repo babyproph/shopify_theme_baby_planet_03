@@ -1,0 +1,791 @@
+
+<div data-section-id="{{ section.id }}"  data-section-type="about-us" class="about-us">
+   <main class="main-content"> 
+  {% if section.settings.show_1_section != blank %}
+  <div class="grid-uniform section-one">
+    <div class="container">
+      <div class="grid__item">       
+        
+        <div class="grid__item wide--one-third post-large--one-third large--one-third">
+          <div class="left-img"> 
+            {% if section.settings.left_image != blank %}
+            <img src="{{ section.settings.left_image | img_url: '1024x1024' }}" alt="" title="" /> 
+            {% else %}
+                        <img src="//via.placeholder.com/460x615">
+ {% endif %}  
+          </div>
+        </div> 
+          
+        <div class="grid__item wide--two-thirds post-large--two-thirds large--two-thirds">
+          {% if section.settings.section_1_maintitle != blank %}
+          <h3  style="color:{{section.settings.section_1_maintitlecolor}};"> {{section.settings.section_1_maintitle }}</h3>
+          {% endif %}
+          {% if section.settings.section_1_introdetail != blank %}
+          <p>{{section.settings.section_1_introdetail }}</p>
+          {% endif %}
+          <div class="grid__item ">
+            {% if section.settings.section_1_subtitle != blank %}
+            <h3 style="color:{{section.settings.section_1_subtitlecolor}};">{{section.settings.section_1_subtitle }}</h3>
+            {% endif %}
+            <div class="grid__item ">
+              {% if section.settings.section_1_leftdetail != blank %}
+              <div class="grid__item wide--one-half post-large--one-half large--one-half medium-down--grid__item small--grid__item">
+                {{section.settings.section_1_leftdetail }}
+              </div>
+              {% endif %}
+              {% if section.settings.section_1_rightdetail != blank %}
+              <div class="grid__item wide--one-half post-large--one-half large--one-half medium-down--grid__item small--grid__item">
+                <div class="righttxt-block">
+                  {{section.settings.section_1_rightdetail }}
+                </div>
+              </div>
+              {% endif %}  
+            </div>
+            {% if section.settings.section_1_detail != blank %}
+            {{section.settings.section_1_detail }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+
+  {% if section.settings.show_4_block != blank %}
+  <div class="grid-uniform section-four section-four-icon">
+    <div class="container">
+      {% if section.settings.section_2_mainheading != blank %}
+      <div class="main-heading">
+        <h2>  {{section.settings.section_2_mainheading}}</h2>
+        {% if section.settings.section_2_subheading != blank %}
+        <h6>  {{section.settings.section_2_subheading}}</h6>
+        {% endif %}
+      </div>
+      {% endif %}
+      <div class="grid__item">
+        <div class="grid__item wide--one-half post-large--one-half large--one-half medium--grid__item small-grid__item icon-left">
+          <div class="icon-wrapper ">
+            <div class="icon-detail">
+              {% if section.settings.section_2_iconheading_one != blank %}
+              <h4>  {{section.settings.section_2_iconheading_one}}</h4>
+              {% endif %}
+              {% if section.settings.section_2_icondetail_one != blank %}
+              {{section.settings.section_2_icondetail_one}}
+              {% endif %}
+            </div>
+            {% if section.settings.section_2_iconcls_one != blank %}
+            <div class="icon">
+              <span class="{{section.settings.section_2_iconcls_one}}"> </span>
+            </div>
+            {% endif %}
+          </div>
+          <div class="icon-wrapper ">
+            <div class="icon-detail">
+              {% if section.settings.section_2_iconheading_two != blank %}
+              <h4>  {{section.settings.section_2_iconheading_two}}</h4>
+              {% endif %}
+              {% if section.settings.section_2_icondetail_two != blank %}
+              {{section.settings.section_2_icondetail_two}}
+              {% endif %}
+            </div>
+            {% if section.settings.section_2_iconcls_two != blank %}
+            <div class="icon">
+              <span class="{{section.settings.section_2_iconcls_two}}"> </span>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        <div class="grid__item grid__item wide--one-half post-large--one-half large--one-half medium--grid__item small-grid__item icon-right">
+          <div class="icon-wrapper ">
+            {% if section.settings.section_2_iconcls_three != blank %}
+            <div class="icon">
+              <span class="{{section.settings.section_2_iconcls_three}}"> </span>
+            </div>
+            {% endif %}
+            <div class="icon-detail">
+              {% if section.settings.section_2_iconheading_three != blank %}
+              <h4>  {{section.settings.section_2_iconheading_three}}</h4>
+              {% endif %}
+              {% if section.settings.section_2_icondetail_three != blank %}
+              {{section.settings.section_2_icondetail_three}}
+              {% endif %}
+            </div>
+          </div>
+          <div class="icon-wrapper ">
+            {% if section.settings.section_2_iconcls_four != blank %}
+            <div class="icon">
+              <span class="{{section.settings.section_2_iconcls_four}}"> </span>
+            </div>
+            {% endif %}
+            <div class="icon-detail">
+              {% if section.settings.section_2_iconheading_four != blank %}
+              <h4>  {{section.settings.section_2_iconheading_four}}</h4>
+              {% endif %}
+
+              {% if section.settings.section_2_icondetail_four != blank %}
+              {{section.settings.section_2_icondetail_four}}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+
+
+
+  {% if section.settings.show_4_section %}
+  <div class="section-four">
+    <div class="container">
+      {% if section.settings.imgsection_1_section %}
+      <div class="grid__item inner-row" >        
+       
+        <div class="grid__item wide--one-half post-large--one-half large--one-half">
+          <div class="img-section">    
+             {% if  section.settings.imgsection_1_img != blank %}
+            <img src="{{  section.settings.imgsection_1_img | img_url: "master" }}" alt="{{ section.settings.imgsection_1_img }}" />   
+             {% else %}
+                        <img src="//via.placeholder.com/585x360">
+            {% endif %}
+          </div>
+        </div>
+        
+        <div class="grid__item wide--one-half post-large--one-half large--one-half">
+          <div class="img-section-desc right-section">
+            {% if section.settings.imgsection_1_desc != blank %}
+            <p>{{section.settings.imgsection_1_desc}}</p>  
+            {% endif %}
+            {% if section.settings.author_1_name != blank %}
+            <span>{{section.settings.author_1_name}}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% if section.settings.imgsection_2_section %}
+      <div class="grid__item inner-row" >
+        <div class="grid__item wide--one-half post-large--one-half large--one-half">
+          <div class="img-section-desc left-section">
+            {% if section.settings.imgsection_2_desc != blank %}
+            <p>{{section.settings.imgsection_2_desc}}</p>  
+            {% endif %}
+            {% if section.settings.author_2_name != blank %}
+            <span>{{section.settings.author_2_name}}</span>
+            {% endif %}
+          </div>
+        </div>        
+        
+        <div class="grid__item wide--one-half post-large--one-half large--one-half">
+          <div class="img-section">  
+            {% if  section.settings.imgsection_2_img != blank %}
+            <img src="{{  section.settings.imgsection_2_img | img_url: "master" }}" alt="{{ section.settings.imgsection_2_img }}" />        
+         
+            {% else %}
+                        <img src="//via.placeholder.com/585x360">
+            {% endif %}
+          </div>
+        </div>
+        
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+
+
+
+
+  {% if section.settings.show_5_section != blank %}
+  <div class="grid-uniform section-seven" {% if section.settings.newsletter_bgimg %} style="background-image:url({{section.settings.newsletter_bgimg | img_url: 'master' }});background-repeat:no-repeat;background-attachment:fixed;background-position:center;"{% endif %}>
+    <div class="container">
+      <div class="newsletter-section">
+        {% if section.settings.newsletter_title != blank %}
+        <div class="main-heading">
+          <h2> {{section.settings.newsletter_title }}</h2>
+        </div>
+        {% endif %}
+        <div class="news-letterform">
+          {% include 'newsletter-form' %}
+        </div>
+        {% if section.settings.newsletter_info != blank %}
+        <div class="news-info">
+          {{section.settings.newsletter_info }}   
+        </div>
+        {% endif %}  
+      </div>
+    </div>
+  </div>
+
+  {% endif %}
+
+
+  {% if section.settings.client_section %}
+  <div class="grid-uniform section-seven">
+    <div class="container">
+      {% if  section.settings.section_7_title  != blank %}
+      <div class="main-heading">
+        <h2 style="color:{{section.settings.section_7_title_color  }}">{{section.settings.section_7_title}}</h2>
+        {% if  section.settings. section_7_subtitle  != blank %}
+        <h4 style="color:{{section.settings.section_7_subtitle_color}}">{{section.settings.section_7_subtitle}}</h4>
+        {% endif %}
+
+      </div>
+      {% endif %}
+      <div class="grid__item">
+        <div id="client-car" class="owl-carousel client-section">
+          {% if section.blocks.size > 0 %}  
+          {% for block in section.blocks %}
+          <div class="item">
+            {% if  block.settings.client_1_img != blank %}
+            <a href="{{block.settings.client_link}}">    <img src="{{ block.settings.client_1_img | img_url: "master" }}" alt="{{ block.settings.client_1_imgheading }}" /></a>
+            {% endif %}
+          </div>
+          {% endfor %}
+          {% endif %}
+          
+          <div class="item">
+            {% if settings.aboutvedafourclient_1_img %}
+            <a href="#"> <img src="{{ 'aboutvedafourclient_1_img.jpg' | asset_url }}" alt="" /></a>
+            {% else %}
+                        <img src="//via.placeholder.com/220x180">
+            
+            {% endif %} 
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %} 
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+  .about-us .righttxt-block p::before { border-left: 1px solid {{section.settings.section_2_bordercolor}};}
+
+  .about-us .righttxt-block p{ border-left: 4px solid {{section.settings.section_2_bordercolor}};}
+
+  .about-us .section-four.section-four-icon{background:{{section.settings.section_2_bgcolor}};}
+
+  .about-us .section-four .main-heading h2 , .about-us .section-four .main-heading h6{color:{{section.settings.section_2_txtcolor}};}
+
+  .about-us   .grid__item.post-large--one-half.icon-left {border-right:1px solid {{section.settings.section_2_txtcolor}};}
+
+  .about-us .section-four .icon-wrapper  h4 ,  .about-us .section-four .icon-wrapper  p{color:{{section.settings.section_2_txtcolor}};}
+
+  .about-us .section-four .icon{background:{{section.settings.section_2_txtcolor}};}
+
+  .about-us .section-four .icon-wrapper span {color:{{section.settings.section_2_iconcolorone}};}
+
+  .about-us .section-four .icon-wrapper:hover .icon{}
+
+  .about-us .section-four .icon-wrapper:hover .icon span{color:{{section.settings.section_2_txtcolor}};}
+
+  .about-us .section-four .icon::after { background:{{section.settings.section_2_iconcolorone}};}
+
+  .about-us .section-four .icon-wrapper span {color:{{section.settings.section_2_iconcolorone}};}
+
+  .about-us .img-section-desc{background:{{section.settings.imgsection_1_bg}}; }
+
+  .about-us .img-section-desc.right-section{box-shadow: 20px 20px 20px 0 {{section.settings.imgsection_1_box}};}
+
+  .about-us .img-section-desc.left-section{box-shadow: -20px 20px 20px 0 {{section.settings.imgsection_1_box}};}
+
+  .about-us .section-four .img-section-desc p{color:{{section.settings.imgsection_desccolor }};}
+
+  .about-us .section-four .img-section-desc span{color:{{section.settings.imgsectionauthorcolor }};}
+
+
+  .about-us .news-info{background:{{section.settings.newsltre_infobg}};}
+
+  .about-us .news-info p{color:{{section.settings.newsltre_infocolor}};}
+
+  .about-us .news-info::after{ border-top: 18px solid {{section.settings.newsltre_infobg}};}
+
+  .about-us .newsletter-section .main-heading h2{color:{{section.settings.newsltre_titlecolor}};}
+  
+  
+  .about-us .client-section .item a{border:2px solid {{section.settings.clientimg_border_color}};}
+
+  .about-us .client-section .item a:hover{box-shadow:0 0 5px 2px {{ section.settings.clientimg_border_color | color_modify: 'alpha', 1 }};}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+"name": "About Page",
+"settings": [
+
+{
+"type": "header",
+"content": "Block 1"
+},
+{
+"type": "checkbox",
+"id": "show_1_section",
+"label": "Display  This Section"
+},
+{
+"type": "image_picker",
+"id": "left_image",
+"label": "Image",
+"info": "Size: 362x471"
+},
+{
+"type": "text",
+"id": "section_1_maintitle",
+"label": "Heading",
+"default": "Title..."
+},
+{
+"type": "color",
+"id": "section_1_maintitlecolor",
+"label": "Title Color",
+"default": "#000"
+},
+{
+"type": "richtext",
+"id": "section_1_introdetail",
+"label": "Intro Text",
+"default": "<p>detail</p>"
+},
+{
+"type": "text",
+"id": "section_1_subtitle",
+"label": "Heading",
+"default": "Title..."
+},
+{
+"type": "color",
+"id": "section_1_subtitlecolor",
+"label": "Title Color",
+"default": "#000"
+},
+{
+"type": "richtext",
+"id": "section_1_leftdetail",
+"label": "Detail",
+"default": "<p>detail</p>"
+},
+{
+"type": "richtext",
+"id": "section_1_rightdetail",
+"label": "Detail",
+"default": "<p>detail</p>"
+},
+{
+"type": "richtext",
+"id": "section_1_detail",
+"label": "Detail",
+"default": "<p>detail</p>"
+},
+{
+"type": "color",
+"id": "section_2_bordercolor",
+"label": "Border Color",
+"default": "#000"
+},
+
+{
+"type": "header",
+"content": "Block 2"
+},
+{
+"type": "checkbox",
+"id": "show_4_block",
+"label": "Display  This Section"
+},
+{
+"type": "color",
+"id": "section_2_bgcolor",
+"label": "Bg color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "section_2_txtcolor",
+"label": "Text color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "section_2_iconcolorone",
+"label": "Icon color",
+"default": "#000"
+},
+{
+"type": "text",
+"id": "section_2_mainheading",
+"label": "Main Heading",
+"default": "Title...."
+},
+{
+"type": "text",
+"id": "section_2_subheading",
+"label": "Sub Heading",
+"default": "Sub Title..."
+},
+{
+"type": "text",
+"id": "section_2_iconheading_one",
+"label": "Sub Heading",
+"default": "Sub Title..."
+},
+{
+"type": "richtext",
+"id": "section_2_icondetail_one",
+"label": "Detail",
+"default": "<p>Some description...</p>"
+},
+{
+"type": "text",
+"id": "section_2_iconcls_one",
+"label": "Icon cls",
+"default": "icon class"
+},
+{
+"type": "text",
+"id": "section_2_iconheading_two",
+"label": "Sub Heading",
+"default": "Sub Title..."
+},
+{
+"type": "richtext",
+"id": "section_2_icondetail_two",
+"label": "Detail",
+"default": "<p>Some description...</p>"
+},
+{
+"type": "text",
+"id": "section_2_iconcls_two",
+"label": "Icon cls",
+"default": "icon class"
+},
+{
+"type": "text",
+"id": "section_2_iconheading_three",
+"label": "Sub Heading",
+"default": "Sub Title..."
+},
+{
+"type": "richtext",
+"id": "section_2_icondetail_three",
+"label": "Detail",
+"default": "<p>Some description...</p>"
+},
+{
+"type": "text",
+"id": "section_2_iconcls_three",
+"label": "Icon cls",
+"default": "icon class"
+},
+
+{
+"type": "text",
+"id": "section_2_iconheading_four",
+"label": "Sub Heading",
+"default": "Sub Title..."
+},
+{
+"type": "richtext",
+"id": "section_2_icondetail_four",
+"label": "Detail",
+"default": "<p>Some description...</p>"
+},
+{
+"type": "text",
+"id": "section_2_iconcls_four",
+"label": "Icon cls",
+"default": "icon class"
+},
+{
+"type": "header",
+"content": "Block 3"
+},
+{
+"type": "checkbox",
+"id": "show_4_section",
+"label": "Display  This Section"
+},
+{
+"type": "checkbox",
+"id": "imgsection_1_section",
+"label": "Display  This Section"
+},
+{
+"type": "image_picker",
+"id": "imgsection_1_img",
+"label": "Image",
+"info": "Size: 1170x715"
+},
+{
+"type": "text",
+"id": "imgsection_1_imgheading",
+"label": "Img alt text"
+},
+{
+"type": "textarea",
+"id": "imgsection_1_desc",
+"label": "Desc"
+},
+{
+"type": "text",
+"id": "author_1_name",
+"label": "Author Name"
+},
+{
+"type": "color",
+"id": "imgsection_1_bg",
+"default": "#000",
+"label": "Bg Color"
+},
+{
+"type": "color",
+"id": "imgsection_1_box",
+"default": "#000",
+"label": "Box Shadow"
+},
+{
+"type": "color",
+"id": "imgsection_desccolor",
+"default": "#000",
+"label": "Desc COlor"
+},
+{
+"type": "color",
+"id": "imgsectionauthorcolor",
+"default": "#000",
+"label": "Author Color"
+},
+{
+"type": "checkbox",
+"id": "imgsection_2_section",
+"label": "Display  This Section"
+},
+{
+"type": "image_picker",
+"id": "imgsection_2_img",
+"label": "Image",
+"info": "Size: 1170x715"
+},
+{
+"type": "text",
+"id": "imgsection_2_imgheading",
+"label": "Img alt text"
+},
+{
+"type": "textarea",
+"id": "imgsection_2_desc",
+"label": "Desc"
+},
+{
+"type": "text",
+"id": "author_2_name",
+"label": "Author Name"
+},
+{
+"type": "color",
+"id": "imgsection_2_bg",
+"default": "#000",
+"label": "Bg Color"
+},
+{
+"type": "color",
+"id": "imgsection_2_box",
+"default": "#000",
+"label": "Box Shadow"
+},
+{
+"type": "header",
+"content": "Block 4"
+},
+{
+"type": "checkbox",
+"id": "show_5_section",
+"label": "Display This section"
+},
+{
+"type": "text",
+"id": "newsletter_title",
+"label": "Title",
+"default": "heading"
+},
+{
+"type": "image_picker",
+"id": "newsletter_bgimg",
+"label": "Image"
+},
+{
+"type": "richtext",
+"id": "newsletter_info",
+"label": "Newsletter info",
+"default": "<p>detail...</p>"
+},
+
+{
+"type": "color",
+"id": "newsltre_infobg",
+"label": "Newsletter info bg",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "newsltre_titlecolor",
+"label": "Newsletter Title color",
+"default": "#000"
+},
+{
+"type": "color",
+"id": "newsltre_infocolor",
+"label": "Newsletter info color",
+"default": "#000"
+},
+{
+"type": "header",
+"content": "Section Six"
+},
+{
+"type": "checkbox",
+"id": "client_section",
+"label": "Display  This Section"
+},
+{
+"type": "text",
+"id": "section_7_title",
+"label": "Heading"
+},
+{
+"type": "color",
+"id": "section_7_title_color",
+"default": "#000",
+"label": "Heading Color"
+},
+{
+"type": "text",
+"id": "section_7_subtitle",
+"label": "Sub Heading"
+},
+{
+"type": "color",
+"id": "section_7_subtitle_color",
+"default": "#000",
+"label": "Sub Heading Color"
+},
+{
+"type": "color",
+"id": "clientimg_border_color",
+"default": "#000",
+"label": "Border Color"
+}
+
+
+],
+"blocks": [
+{
+"type": "text",
+"name":"client img",
+"settings": [
+{
+"type": "image_picker",
+"id": "client_1_img",
+"label": "Image",
+"info": "Size: 240x110"
+},
+{
+"type": "text",
+"id": "client_1_imgheading",
+"label": "text"
+},
+{
+"type": "url",
+"id": "client_link",
+"label": "Link URL"
+}
+]
+}
+]
+}
+
+
+
+{% endschema %}
+
+{% stylesheet %}
+
+
+{% endstylesheet %}
+
+{% javascript %}
+
+
+jQuery(document).ready(function() {
+
+$(".inline").colorbox({inline:true, width:"50%"});
+});
+
+
+
+
+$(document).ready(function() {
+
+//Sort random function
+function random(owlSelector){
+owlSelector.children().sort(function(){
+return Math.round(Math.random()) - 0.5;
+}).each(function(){
+$(this).appendTo(owlSelector);
+});
+}
+
+jQuery("#client-car").owlCarousel({   
+navigation: false,
+items : 5,
+itemsDesktop : [1200,4],
+itemsTablet: [767,4],
+itemsTabletSmall: [721,3],
+itemsMobile : [479,2],
+});
+});
+
+
+
+
+
+
+{% endjavascript %}

@@ -1,0 +1,168 @@
+<div data-section-id="{{ section.id }}"  data-section-type="home-product-grid-type-12-b" class="home-product-grid-type-12-b">
+    {%- assign collection = collections[section.settings.collection] -%}   
+    {% if section.settings.title != blank %}
+    <div class="border-title">    
+      <h4 class="section-header__title" style="color:{{ section.settings.title_color }};">    
+        {{ section.settings.title }}
+      </h4>            
+    </div>
+    {% endif %}
+  <div class="grid-uniform">     
+    <div class="grid__item wide--three-quarters post-large--three-quarters large--three-quarters medium-down--grid__item small--grid__item">
+      <div class="product-grid-type-12">
+        {% assign grid_item_width = ' ' %} 
+        <ul class="grid-uniform product-grid-type__12-b {{ section.id }} owl-carousel owl-theme">
+          {% for product in collection.products %}
+          {% include 'vertical_grid_item_2', grid_item_width:grid_item_width %}   
+          {% else %}
+          {% for i in (1..8) %}
+          <li class="grid__item item-row  on-sale" id="product-{{ i }}">
+            <div class="products product-list">
+  <div class="grid__item wide--one-third  post-large--one-third  large--one-third medium--one-third small--grid__item">
+              <div class="product-container">
+                <a href="#" class="grid-link"> 
+                  <div class="reveal"> 
+                    {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                    {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }} 
+                  </div>
+                </a>
+                <div class="ImageWrapper">
+                  <div class="product-button">
+                      <a href="#" class="quick-view-text"> 
+                        <i class="zmdi zmdi-eye"></i>
+                      </a>
+                      <a href="{{ product.url }}">                      
+                        <i class="zmdi zmdi-link"></i>
+                      </a>  
+                      <form action="#" method="post" class="variants clearfix" id="cart-form-6529189125">
+                        <input type="hidden" name="id" value="21661289093">
+                        <a href="#" class="add-cart-btn"><i class="zmdi zmdi-shopping-cart"></i> </a>
+                      </form>
+                      <a href="/account/login" class="wishlist"><i class="zmdi zmdi-favorite-outline"></i></a> 
+
+                  </div>
+                </div>
+              </div>
+              </div>
+  <div class="grid__item wide--two-thirds post-large--two-thirds  large--two-thirds  medium--two-thirds  small--grid__item ">
+              <div class="product-detail"> 
+                <a href="#" class="grid-link__title">Sample title {{ i }}</a>
+
+                <div class="grid-link__meta">
+                  <div class="product_price"> <span class="money" data-currency-usd="$320.00">$0.00</span> </div>
+                  <del class="grid-link__sale_price"><span class="money" data-currency-usd="$756.00">$0.00</span></del> </div>
+                <span class="spr-badge" id="spr_badge_6529189125" data-rating="0.0"> 
+                  <span class="spr-starrating spr-badge-starrating"><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i><i class="spr-icon spr-icon-star-empty" style="color: #f05315;"></i></span> <span class="spr-badge-caption"> </span> </span>
+
+              </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %} 
+          {% endfor %}
+        </ul>
+        <div class="nav_product-grid-type__12-b"> </div>
+      </div>
+    </div>
+  <div class="grid__item wide--one-quarter post-large--one-quarter large--one-quarter medium-down--grid__item small--grid__item" style="text-align:center;">
+   {% if section.settings.image != blank %}
+    <a href="{{ section.settings.link_1 }}"><img src="{{ section.settings.image | img_url: '450x700' }}" alt="{{ section.settings.title }}" /></a>
+        {% else %}
+        <img src="//via.placeholder.com/450x700">
+        {% endif%}  
+    </div>
+  </div>
+  
+    <style>
+      .home-product-grid-type-12-b .nav_product-grid-type__12-b a {  color:{{ section.settings.arrow_text_clr }}; }
+      .home-product-grid-type-12-b .nav_product-grid-type__12-b a:hover {  color:{{ section.settings.arrow_text_hover_clr }}; }
+
+    </style>
+  </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){   
+      var grid_type_12 = $(".product-grid-type__12-b.{{ section.id }}");
+      grid_type_12.owlCarousel({
+        loop:false,
+        margin:0,
+        nav:true,
+        navContainer: ".nav_product-grid-type__12-b",
+        navText: ['<a class="prev"><i class="icon-arrow-left icons" aria-hidden="true"></i></a>','<a class="next"><i class="icon-arrow-right icons" aria-hidden="true"></i></a>'],
+        dots: false,
+		items:1
+      
+      });
+      
+  });
+      
+</script>
+{% schema %}
+{
+  "name": "Product Carousel 1",
+  "class": "index-section",
+  "settings": [ 
+
+{
+      "type": "color",
+      "id": "bg_color",
+      "label": "Bg Color",
+      "default": "#fff"
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "New arrivals"
+    },	
+	{
+      "type": "color",
+      "id": "title_color",
+      "label": "Heading Color",
+      "default": "#000"
+    },		
+	{
+      "type": "color",
+      "id": "arrow_text_clr",
+      "label": "Arrow Text",
+ 	  "default":"#000"
+      
+    },
+	{
+      "type": "color",
+      "id": "arrow_text_hover_clr",
+      "label": "Arrow Hover Text",
+ 	  "default":"#ff0069"
+      
+    },
+
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    },
+
+	{
+    "type": "image_picker",
+    "id": "image",
+    "label": "Image",
+    "info": "Size: 450x700"
+    },
+    {
+    "type": "url",
+    "id": "link_1",
+    "label": "Link URL"
+    }
+  
+  ],
+  "presets": [
+    {
+         "name": "Product Carousel 1",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
+
+
+
