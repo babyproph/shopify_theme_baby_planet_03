@@ -1377,7 +1377,7 @@
         "settings": {
           "display_search": true,
           "display_all_category": true,
-          "all_categories": "main-menu",
+          "all_categories": "category",
           "categories_bg": "#ffffff",
           "categories_text": "#685f52",
           "display_minicart": true,
