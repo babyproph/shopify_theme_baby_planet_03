@@ -1360,7 +1360,7 @@
             "settings": {
               "title": "Menu - Style 1",
               "megamenu_items_1": "Category",
-              "main_linklist_1": "category",
+              "main_linklist_1": "main-menu",
               "link_banner_first_style_1": ""
             }
           }
