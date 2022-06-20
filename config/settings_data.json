@@ -744,7 +744,7 @@
             "type": "text_block",
             "settings": {
               "title": "New Products",
-              "collection": "woolen-clothes"
+              "collection": "frontpage"
             }
           },
           "1523102958052": {
