@@ -737,7 +737,7 @@
             "type": "text_block",
             "settings": {
               "title": "Featured products",
-              "collection": "winter-clothes"
+              "collection": "frontpage"
             }
           },
           "1523102948142": {
