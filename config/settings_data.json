@@ -787,7 +787,7 @@
         "settings": {
           "enable_sidecategory": true,
           "sidebar_bg_color": "#ffffff",
-          "linkedlist": "sidebar-menu",
+          "linkedlist": "category",
           "linkedlist_title": "Categories"
         }
       },
