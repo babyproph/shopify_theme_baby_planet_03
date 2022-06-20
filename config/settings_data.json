@@ -912,10 +912,10 @@
           "1523453494330": {
             "type": "text",
             "settings": {
-              "image": "shopify:\/\/shop_images\/icon3_50x_76f6fd21-c82f-49e1-a70f-8a903dab264b.png",
-              "title": "Big Saving",
+              "image": "shopify:\/\/shop_images\/lowest_1.png",
+              "title": "Lowest Price",
               "title_color": "#444444",
-              "desc": "at Lowest Price",
+              "desc": "Big Saving",
               "desc_color": "#848484"
             }
           },
