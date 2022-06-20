@@ -737,7 +737,7 @@
             "type": "text_block",
             "settings": {
               "title": "Featured products",
-              "collection": "frontpage"
+              "collection": "bbet-premuim-products"
             }
           },
           "1523102948142": {
@@ -1363,10 +1363,22 @@
               "main_linklist_1": "category",
               "link_banner_first_style_1": ""
             }
+          },
+          "c4ae29ef-6090-43cc-bf96-c375eafcefa4": {
+            "type": "style_2",
+            "settings": {
+              "title": "Menu - Style 2",
+              "megamenu_items_2": "Catalog",
+              "main_linklist_2": "category",
+              "link_banner_second_style_2": "",
+              "link_banner_third_style_2": "",
+              "link_banner_first_style_2": ""
+            }
           }
         },
         "block_order": [
-          "ce54094a-1554-4828-85cc-3a86b8ba9749"
+          "ce54094a-1554-4828-85cc-3a86b8ba9749",
+          "c4ae29ef-6090-43cc-bf96-c375eafcefa4"
         ],
         "settings": {
           "display_megamenu": true
