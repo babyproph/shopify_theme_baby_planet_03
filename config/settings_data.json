@@ -309,7 +309,7 @@
         "type": "sidebar-category",
         "settings": {
           "enable_sidecategory": true,
-          "linkedlist": "",
+          "linkedlist": "category",
           "linkedlist_title": "Category"
         }
       },
