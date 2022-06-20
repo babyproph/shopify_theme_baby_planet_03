@@ -902,9 +902,9 @@
           "1523453420878": {
             "type": "text",
             "settings": {
-              "image": "shopify:\/\/shop_images\/icon1_50x_d2eed1f2-c6a3-4eef-8776-f8b2883a6195.png",
-              "title": "Free Shipping",
-              "title_color": "#444444",
+              "image": "shopify:\/\/shop_images\/2000.webp",
+              "title": "Fast Shipping",
+              "title_color": "#685f52",
               "desc": "Deliver to Door",
               "desc_color": "#848484"
             }
@@ -948,7 +948,7 @@
         ],
         "settings": {
           "support_block": true,
-          "bg_color": "#f9f7e6"
+          "bg_color": "#c8e9f0"
         }
       },
       "blog-sidebar-instagram": {
