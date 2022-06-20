@@ -737,7 +737,7 @@
             "type": "text_block",
             "settings": {
               "title": "Featured products",
-              "collection": "frontpage"
+              "collection": "premium-bbet-product"
             }
           },
           "1523102948142": {
