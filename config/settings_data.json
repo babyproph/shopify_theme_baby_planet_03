@@ -1030,22 +1030,22 @@
       "grid-banner-type-20": {
         "type": "grid-banner-type-20",
         "blocks": {
-          "1524137439203": {
+          "89778416-0605-4ed7-8caa-c370a6bf007e": {
             "type": "image",
             "settings": {
-              "slideshow_1_img": "shopify:\/\/shop_images\/AB_testing_ads_2022-1_1200_x_1200_px_595_x_595_px_2000_x_2000_px_750_x_478_px_880_x_755_px_1.png",
+              "slideshow_1_img": "shopify:\/\/shop_images\/Planet_Arcadia_1200_x_630_px_880_x_755_px.png",
               "slider1_title": "",
-              "slide_1_heading": "#685f52",
+              "slide_1_heading": "#000000",
               "slider1_subtitle": "",
-              "slide_1_subheading": "#ff5cb0",
+              "slide_1_subheading": "#ffffff",
               "slider1_content": "",
-              "slide_1_desc": "#685f52",
-              "slide_1_link": "",
+              "slide_1_desc": "#ffffff",
+              "slide_1_link": "\/collections\/all",
               "slide_1_btn_txt": "",
-              "slide_1_btn": "#685f52",
-              "slide_1_btn_hover_txt": "#00d4c5",
-              "overlay_5_use": true,
-              "overlay_5": "#ffffff"
+              "slide_1_btn": "#000",
+              "slide_1_btn_hover_txt": "#000",
+              "overlay_5_use": false,
+              "overlay_5": "#fff"
             }
           },
           "1540279739348": {
@@ -1066,29 +1066,29 @@
               "overlay_5": "#ffffff"
             }
           },
-          "89778416-0605-4ed7-8caa-c370a6bf007e": {
+          "1524137439203": {
             "type": "image",
             "settings": {
-              "slideshow_1_img": "shopify:\/\/shop_images\/Planet_Arcadia_1200_x_630_px_880_x_755_px.png",
+              "slideshow_1_img": "shopify:\/\/shop_images\/AB_testing_ads_2022-1_1200_x_1200_px_595_x_595_px_2000_x_2000_px_750_x_478_px_880_x_755_px_1.png",
               "slider1_title": "",
-              "slide_1_heading": "#000000",
+              "slide_1_heading": "#685f52",
               "slider1_subtitle": "",
-              "slide_1_subheading": "#ffffff",
+              "slide_1_subheading": "#ff5cb0",
               "slider1_content": "",
-              "slide_1_desc": "#ffffff",
-              "slide_1_link": "\/collections\/all",
+              "slide_1_desc": "#685f52",
+              "slide_1_link": "",
               "slide_1_btn_txt": "",
-              "slide_1_btn": "#000",
-              "slide_1_btn_hover_txt": "#000",
-              "overlay_5_use": false,
-              "overlay_5": "#fff"
+              "slide_1_btn": "#685f52",
+              "slide_1_btn_hover_txt": "#00d4c5",
+              "overlay_5_use": true,
+              "overlay_5": "#ffffff"
             }
           }
         },
         "block_order": [
-          "1524137439203",
+          "89778416-0605-4ed7-8caa-c370a6bf007e",
           "1540279739348",
-          "89778416-0605-4ed7-8caa-c370a6bf007e"
+          "1524137439203"
         ],
         "settings": {
           "image_1": "shopify:\/\/shop_images\/FB_carousel_690_x_205_px_1200_x_600_px_700_x_600_px_6.png",
