@@ -1033,7 +1033,7 @@
           "79dfaa9b-036d-4ae0-9b91-a9c98ca40003": {
             "type": "image",
             "settings": {
-              "slideshow_1_img": "shopify:\/\/shop_images\/Beige_Brown_Formula_Milk_For_Baby_Facebook_Post_880_x_755_px_2.png",
+              "slideshow_1_img": "shopify:\/\/shop_images\/Beige_Brown_Formula_Milk_For_Baby_Facebook_Post_880_x_755_px_3.png",
               "slider1_title": "",
               "slide_1_heading": "#000000",
               "slider1_subtitle": "",
@@ -1042,10 +1042,10 @@
               "slide_1_desc": "#ffffff",
               "slide_1_link": "\/collections\/all",
               "slide_1_btn_txt": "",
-              "slide_1_btn": "#000",
-              "slide_1_btn_hover_txt": "#000",
+              "slide_1_btn": "#000000",
+              "slide_1_btn_hover_txt": "#000000",
               "overlay_5_use": false,
-              "overlay_5": "#fff"
+              "overlay_5": "#ffffff"
             }
           },
           "1540279739348": {
