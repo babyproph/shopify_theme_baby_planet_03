@@ -1030,10 +1030,28 @@
       "grid-banner-type-20": {
         "type": "grid-banner-type-20",
         "blocks": {
+          "9f85e722-8cbc-43c0-beb8-e4fccab86da9": {
+            "type": "image",
+            "settings": {
+              "slideshow_1_img": "shopify:\/\/shop_images\/Planet_Arcadia_1200_x_630_px_880_x_755_px_2.png",
+              "slider1_title": "",
+              "slide_1_heading": "#000000",
+              "slider1_subtitle": "",
+              "slide_1_subheading": "#ffffff",
+              "slider1_content": "",
+              "slide_1_desc": "#ffffff",
+              "slide_1_link": "\/collections\/all",
+              "slide_1_btn_txt": "",
+              "slide_1_btn": "#000000",
+              "slide_1_btn_hover_txt": "#000000",
+              "overlay_5_use": false,
+              "overlay_5": "#ffffff"
+            }
+          },
           "b6017eb2-e1fc-4be7-bb29-8abd12cb1c29": {
             "type": "image",
             "settings": {
-              "slideshow_1_img": "shopify:\/\/shop_images\/vib.es_1280_x_1280_px_600_x_290_px_880_x_755_px_1920_x_1920_px_880_x_755_px_2.png",
+              "slideshow_1_img": "shopify:\/\/shop_images\/Beige_Brown_Formula_Milk_For_Baby_Facebook_Post_880_x_755_px_1_2a7cc13f-4a91-41bf-a037-35b0f0d51ad6.png",
               "slider1_title": "",
               "slide_1_heading": "#000000",
               "slider1_subtitle": "",
@@ -1052,24 +1070,6 @@
             "type": "image",
             "settings": {
               "slideshow_1_img": "shopify:\/\/shop_images\/Grey_Simple_Sale_for_Babies_Product_Instagram_Post_1920_x_1920_px_2000_x_2000_px_880_x_755_px.png",
-              "slider1_title": "",
-              "slide_1_heading": "#000000",
-              "slider1_subtitle": "",
-              "slide_1_subheading": "#ffffff",
-              "slider1_content": "",
-              "slide_1_desc": "#ffffff",
-              "slide_1_link": "\/collections\/all",
-              "slide_1_btn_txt": "",
-              "slide_1_btn": "#000000",
-              "slide_1_btn_hover_txt": "#000000",
-              "overlay_5_use": false,
-              "overlay_5": "#ffffff"
-            }
-          },
-          "9f85e722-8cbc-43c0-beb8-e4fccab86da9": {
-            "type": "image",
-            "settings": {
-              "slideshow_1_img": "shopify:\/\/shop_images\/Planet_Arcadia_1200_x_630_px_880_x_755_px_2.png",
               "slider1_title": "",
               "slide_1_heading": "#000000",
               "slider1_subtitle": "",
@@ -1104,9 +1104,9 @@
           }
         },
         "block_order": [
+          "9f85e722-8cbc-43c0-beb8-e4fccab86da9",
           "b6017eb2-e1fc-4be7-bb29-8abd12cb1c29",
           "79dfaa9b-036d-4ae0-9b91-a9c98ca40003",
-          "9f85e722-8cbc-43c0-beb8-e4fccab86da9",
           "1524137439203"
         ],
         "settings": {
@@ -1296,18 +1296,18 @@
           "show_contact_1_iconwrapper": true,
           "show_contact_1_address": true,
           "contact_add_heading": "ADDRESS",
-          "contact_add_detail": "62,74th Avenue-galendale NY 11385 , US",
+          "contact_add_detail": "Room 405, Campos Rueda Building, 101 Urban Ave, Pio Del Pilar, Makati City",
           "show_contact_1_email": true,
           "contact_mail_heading": "EMAIL",
-          "contact_mail_detail": "Email:contact@example.com",
+          "contact_mail_detail": "info@babypro.ph",
           "show_contact_1_phone": true,
           "contact_phone_heading": "PHONE",
-          "contact_phone_detail": "call:+1800-1234-5678",
+          "contact_phone_detail": "(02) 835333299",
           "show_contact_1_time": true,
           "contact_time_heading": "TIMING",
-          "contact_time_detail": "Available at 10am-8pm",
+          "contact_time_detail": "9am-6pm Mon to Fri",
           "enable_gmap": true,
-          "contact_iframe_code": "<iframe style=\"border:0;scrolling=\" no=\"\" src=\"https:\/\/maps.google.co.in\/?ie=UTF8&t=m&ll=-37.823006,144.977388&spn=0.02034,0.042915&z=14&output=embed\" width=\"960\" height=\"578\"><\/iframe>",
+          "contact_iframe_code": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3861.687600198949!2d121.01147055110053!3d14.55984888977855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9a31b70ec1d%3A0xcaf8b201b25424c9!2sBabyPro%20Philippine!5e0!3m2!1sen!2sph!4v1656057046317!5m2!1sen!2sph\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
           "contact_1_linkcolor": "#000000",
           "contact_1_linkhovercolor": "#00d4c5",
           "contact_1_iconbg": "#000000",
@@ -1331,18 +1331,18 @@
           "contact_1_socialiconhovercolor": "#ffffff",
           "show_contact_1_facebook": true,
           "contact_1_icon": "fa fa-facebook",
-          "contact_1_facebook": "",
-          "show_contact_1_twitter": true,
+          "contact_1_facebook": "https:\/\/www.facebook.com\/BabyProPhilippines",
+          "show_contact_1_twitter": false,
           "contact_2_icon": "fa fa-twitter",
           "contact_1_twitter": "",
-          "show_contact_1_googleplus": true,
+          "show_contact_1_googleplus": false,
           "contact_3_icon": "fa fa-google-plus",
           "contact_1_googleplus": "",
           "show_contact_1_youtube": true,
           "contact_4_icon": "fa fa-youtube",
-          "contact_1_youtube": "",
+          "contact_1_youtube": "https:\/\/www.youtube.com\/channel\/UCp-qgkHDdTnN-V9dd8jTojw",
           "contact_5_icon": "fa fa-pinterest",
-          "show_contact_1_pinterest": true,
+          "show_contact_1_pinterest": false,
           "contact_1_pinterest": ""
         }
       },
