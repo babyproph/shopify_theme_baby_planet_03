@@ -1030,6 +1030,42 @@
       "grid-banner-type-20": {
         "type": "grid-banner-type-20",
         "blocks": {
+          "9f85e722-8cbc-43c0-beb8-e4fccab86da9": {
+            "type": "image",
+            "settings": {
+              "slideshow_1_img": "shopify:\/\/shop_images\/Planet_Arcadia_1200_x_630_px_880_x_755_px_2.png",
+              "slider1_title": "",
+              "slide_1_heading": "#000000",
+              "slider1_subtitle": "",
+              "slide_1_subheading": "#ffffff",
+              "slider1_content": "",
+              "slide_1_desc": "#ffffff",
+              "slide_1_link": "\/collections\/all",
+              "slide_1_btn_txt": "",
+              "slide_1_btn": "#000",
+              "slide_1_btn_hover_txt": "#000",
+              "overlay_5_use": false,
+              "overlay_5": "#fff"
+            }
+          },
+          "b6017eb2-e1fc-4be7-bb29-8abd12cb1c29": {
+            "type": "image",
+            "settings": {
+              "slideshow_1_img": "shopify:\/\/shop_images\/Beige_Brown_Formula_Milk_For_Baby_Facebook_Post_880_x_755_px_1_2a7cc13f-4a91-41bf-a037-35b0f0d51ad6.png",
+              "slider1_title": "",
+              "slide_1_heading": "#000000",
+              "slider1_subtitle": "",
+              "slide_1_subheading": "#ffffff",
+              "slider1_content": "",
+              "slide_1_desc": "#ffffff",
+              "slide_1_link": "\/collections\/all",
+              "slide_1_btn_txt": "",
+              "slide_1_btn": "#000",
+              "slide_1_btn_hover_txt": "#000",
+              "overlay_5_use": false,
+              "overlay_5": "#fff"
+            }
+          },
           "79dfaa9b-036d-4ae0-9b91-a9c98ca40003": {
             "type": "image",
             "settings": {
@@ -1065,49 +1101,13 @@
               "overlay_5_use": true,
               "overlay_5": "#ffffff"
             }
-          },
-          "b6017eb2-e1fc-4be7-bb29-8abd12cb1c29": {
-            "type": "image",
-            "settings": {
-              "slideshow_1_img": "shopify:\/\/shop_images\/Beige_Brown_Formula_Milk_For_Baby_Facebook_Post_880_x_755_px_1_2a7cc13f-4a91-41bf-a037-35b0f0d51ad6.png",
-              "slider1_title": "",
-              "slide_1_heading": "#000000",
-              "slider1_subtitle": "",
-              "slide_1_subheading": "#ffffff",
-              "slider1_content": "",
-              "slide_1_desc": "#ffffff",
-              "slide_1_link": "\/collections\/all",
-              "slide_1_btn_txt": "",
-              "slide_1_btn": "#000",
-              "slide_1_btn_hover_txt": "#000",
-              "overlay_5_use": false,
-              "overlay_5": "#fff"
-            }
-          },
-          "9f85e722-8cbc-43c0-beb8-e4fccab86da9": {
-            "type": "image",
-            "settings": {
-              "slideshow_1_img": "shopify:\/\/shop_images\/Planet_Arcadia_1200_x_630_px_880_x_755_px_2.png",
-              "slider1_title": "",
-              "slide_1_heading": "#000000",
-              "slider1_subtitle": "",
-              "slide_1_subheading": "#ffffff",
-              "slider1_content": "",
-              "slide_1_desc": "#ffffff",
-              "slide_1_link": "\/collections\/all",
-              "slide_1_btn_txt": "",
-              "slide_1_btn": "#000",
-              "slide_1_btn_hover_txt": "#000",
-              "overlay_5_use": false,
-              "overlay_5": "#fff"
-            }
           }
         },
         "block_order": [
-          "79dfaa9b-036d-4ae0-9b91-a9c98ca40003",
-          "1524137439203",
+          "9f85e722-8cbc-43c0-beb8-e4fccab86da9",
           "b6017eb2-e1fc-4be7-bb29-8abd12cb1c29",
-          "9f85e722-8cbc-43c0-beb8-e4fccab86da9"
+          "79dfaa9b-036d-4ae0-9b91-a9c98ca40003",
+          "1524137439203"
         ],
         "settings": {
           "image_1": "shopify:\/\/shop_images\/FB_carousel_690_x_205_px_1200_x_600_px_700_x_600_px_6.png",
