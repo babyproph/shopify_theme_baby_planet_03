@@ -1307,7 +1307,7 @@
           "contact_time_heading": "TIMING",
           "contact_time_detail": "9am-6pm Mon to Fri",
           "enable_gmap": true,
-          "contact_iframe_code": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3861.687600198949!2d121.01147055110053!3d14.55984888977855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9a31b70ec1d%3A0xcaf8b201b25424c9!2sBabyPro%20Philippine!5e0!3m2!1sen!2sph!4v1656057046317!5m2!1sen!2sph\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
+          "contact_iframe_code": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3861.687600198949!2d121.01147055110053!3d14.55984888977855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9a31b70ec1d%3A0xcaf8b201b25424c9!2sBabyPro%20Philippine!5e0!3m2!1sen!2sph!4v1656057046317!5m2!1sen!2sph\" width=\"960\" height=\"578\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>",
           "contact_1_linkcolor": "#000000",
           "contact_1_linkhovercolor": "#00d4c5",
           "contact_1_iconbg": "#000000",
