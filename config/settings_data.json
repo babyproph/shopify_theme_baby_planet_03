@@ -843,7 +843,7 @@
         ],
         "settings": {
           "show_testimonial": true,
-          "background_color": "#ffffff",
+          "background_color": "#f5cccc",
           "title_1": "Mommies Product Views"
         }
       },
