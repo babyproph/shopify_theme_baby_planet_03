@@ -1101,13 +1101,50 @@
               "overlay_5_use": true,
               "overlay_5": "#ffffff"
             }
+          },
+          "98035cfe-eac0-4a54-bf59-fcfd302504c5": {
+            "type": "image",
+            "settings": {
+              "slider1_title": "",
+              "slide_1_heading": "#000000",
+              "slider1_subtitle": "",
+              "slide_1_subheading": "#ffffff",
+              "slider1_content": "",
+              "slide_1_desc": "#ffffff",
+              "slide_1_link": "\/collections\/all",
+              "slide_1_btn_txt": "",
+              "slide_1_btn": "#000",
+              "slide_1_btn_hover_txt": "#000",
+              "overlay_5_use": false,
+              "overlay_5": "#fff"
+            }
+          },
+          "a4ca0a6a-c859-472f-9f2c-1b52dc13e797": {
+            "type": "image",
+            "settings": {
+              "slideshow_1_img": "shopify:\/\/shop_images\/Green_Workshop_Winter_Poster_880_x_755_px.png",
+              "slider1_title": "",
+              "slide_1_heading": "#000000",
+              "slider1_subtitle": "",
+              "slide_1_subheading": "#ffffff",
+              "slider1_content": "",
+              "slide_1_desc": "#ffffff",
+              "slide_1_link": "\/collections\/all",
+              "slide_1_btn_txt": "",
+              "slide_1_btn": "#000",
+              "slide_1_btn_hover_txt": "#000",
+              "overlay_5_use": false,
+              "overlay_5": "#fff"
+            }
           }
         },
         "block_order": [
           "73081396-b64e-45d1-89dc-d1ebde50129a",
           "9f85e722-8cbc-43c0-beb8-e4fccab86da9",
           "79dfaa9b-036d-4ae0-9b91-a9c98ca40003",
-          "1524137439203"
+          "1524137439203",
+          "98035cfe-eac0-4a54-bf59-fcfd302504c5",
+          "a4ca0a6a-c859-472f-9f2c-1b52dc13e797"
         ],
         "settings": {
           "image_1": "shopify:\/\/shop_images\/IG_post_2022-21_700_x_600_px_7.png",
