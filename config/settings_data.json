@@ -747,26 +747,26 @@
               "collection": "baby-bath-essential"
             }
           },
-          "1523102958052": {
-            "type": "text_block",
-            "settings": {
-              "title": "GIFT SET",
-              "collection": "gift-set"
-            }
-          },
           "e624afc6-c1a4-4c7b-ac6c-43f9038a1058": {
             "type": "text_block",
             "settings": {
               "title": "Feeding Products",
               "collection": "baby-bbet-feeding-essential"
             }
+          },
+          "1523102958052": {
+            "type": "text_block",
+            "settings": {
+              "title": "GIFT SET",
+              "collection": "gift-set"
+            }
           }
         },
         "block_order": [
           "1523102352479-0",
           "1523102948142",
-          "1523102958052",
-          "e624afc6-c1a4-4c7b-ac6c-43f9038a1058"
+          "e624afc6-c1a4-4c7b-ac6c-43f9038a1058",
+          "1523102958052"
         ],
         "settings": {
           "title_1": "Top Categories",
