@@ -851,7 +851,7 @@
         "type": "home-sidebar-bestsellers",
         "settings": {
           "show_best_products": true,
-          "sidebar_bg_color": "#ffdcdc",
+          "sidebar_bg_color": "#ffffff",
           "title": "Featured products",
           "bestseller": "baby-bbet-feeding-essential",
           "limit": "3"
