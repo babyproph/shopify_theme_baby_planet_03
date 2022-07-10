@@ -508,26 +508,18 @@
               "client_link": ""
             }
           },
+          "1523278422410": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/White_Simple_Coming_Soon_Baby_Clothes_Facebook_Post_395_x_395_px_190_x_190_px_600_x_600_px_5.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
           "1523278415638": {
             "type": "Image",
             "settings": {
               "client_img": "shopify:\/\/shop_images\/White_Simple_Coming_Soon_Baby_Clothes_Facebook_Post_395_x_395_px_190_x_190_px_600_x_600_px_4.png",
-              "client_heading": "",
-              "client_link": ""
-            }
-          },
-          "1523278417360": {
-            "type": "Image",
-            "settings": {
-              "client_img": "shopify:\/\/shop_images\/White_Simple_Coming_Soon_Baby_Clothes_Facebook_Post_395_x_395_px_190_x_190_px_600_x_600_px.png",
-              "client_heading": "",
-              "client_link": ""
-            }
-          },
-          "1523278419145": {
-            "type": "Image",
-            "settings": {
-              "client_img": "shopify:\/\/shop_images\/White_Simple_Coming_Soon_Baby_Clothes_Facebook_Post_395_x_395_px_190_x_190_px_600_x_600_px_3.png",
               "client_heading": "",
               "client_link": ""
             }
@@ -540,10 +532,18 @@
               "client_link": ""
             }
           },
-          "1523278422410": {
+          "1523278419145": {
             "type": "Image",
             "settings": {
-              "client_img": "shopify:\/\/shop_images\/White_Simple_Coming_Soon_Baby_Clothes_Facebook_Post_395_x_395_px_190_x_190_px_600_x_600_px_5.png",
+              "client_img": "shopify:\/\/shop_images\/White_Simple_Coming_Soon_Baby_Clothes_Facebook_Post_395_x_395_px_190_x_190_px_600_x_600_px_3.png",
+              "client_heading": "",
+              "client_link": ""
+            }
+          },
+          "1523278417360": {
+            "type": "Image",
+            "settings": {
+              "client_img": "shopify:\/\/shop_images\/White_Simple_Coming_Soon_Baby_Clothes_Facebook_Post_395_x_395_px_190_x_190_px_600_x_600_px.png",
               "client_heading": "",
               "client_link": ""
             }
@@ -551,11 +551,11 @@
         },
         "block_order": [
           "1523278414008",
+          "1523278422410",
           "1523278415638",
-          "1523278417360",
-          "1523278419145",
           "1523278420805",
-          "1523278422410"
+          "1523278419145",
+          "1523278417360"
         ],
         "settings": {
           "sidebar_bg_color": "#ffffff",
