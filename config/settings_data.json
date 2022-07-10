@@ -860,7 +860,7 @@
       "home-sidebar-featured-post": {
         "type": "home-sidebar-featured-post",
         "settings": {
-          "show_featured_post": true,
+          "show_featured_post": false,
           "sidebar_bg_color": "#ffffff",
           "title": "Featured posts",
           "pick_featured_blog": "news",
@@ -879,11 +879,11 @@
           "show_best_products": true,
           "sidebar_bg_color": "#ffffff",
           "title": "Daily Deals",
-          "dealitems": "hand-picked",
+          "dealitems": "baby-bbet-milk-storage",
           "dealbtn_border": "rgba(0,0,0,0)",
           "dealbtn": "#ef7b84",
           "dealbtn_text": "#ffffff",
-          "limit": "4"
+          "limit": "6"
         }
       },
       "home-sidebar-instagram": {
