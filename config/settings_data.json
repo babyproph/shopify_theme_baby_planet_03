@@ -657,7 +657,7 @@
           "footer_link": "#685f52",
           "color_footer_link_hover": "#00d4c5",
           "footer_icons_bg": "#ffffff",
-          "footer_social_enable": true,
+          "footer_social_enable": false,
           "social_title": "",
           "footer_show_app_store": true,
           "app_title": "Contact Us",
