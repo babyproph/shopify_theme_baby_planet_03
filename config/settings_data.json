@@ -309,7 +309,7 @@
         "type": "sidebar-category",
         "settings": {
           "enable_sidecategory": true,
-          "linkedlist": "category",
+          "linkedlist": "categories-menu",
           "linkedlist_title": "Category"
         }
       },
@@ -798,7 +798,7 @@
         "settings": {
           "enable_sidecategory": true,
           "sidebar_bg_color": "#ffffff",
-          "linkedlist": "category",
+          "linkedlist": "categories-menu",
           "linkedlist_title": "Categories"
         }
       },
@@ -1409,7 +1409,7 @@
             "settings": {
               "title": "Menu - Style 1",
               "megamenu_items_1": "Product",
-              "main_linklist_1": "category",
+              "main_linklist_1": "categories-menu",
               "link_banner_first_style_1": ""
             }
           },
@@ -1418,7 +1418,7 @@
             "settings": {
               "title": "Menu - Style 2",
               "megamenu_items_2": "Catalog",
-              "main_linklist_2": "category",
+              "main_linklist_2": "categories-menu",
               "link_banner_second_style_2": "",
               "link_banner_third_style_2": "",
               "link_banner_first_style_2": ""
@@ -1438,7 +1438,7 @@
         "settings": {
           "display_search": true,
           "display_all_category": true,
-          "all_categories": "category",
+          "all_categories": "categories-menu",
           "categories_bg": "#ffffff",
           "categories_text": "#685f52",
           "display_minicart": true,
